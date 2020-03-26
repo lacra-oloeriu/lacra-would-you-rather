@@ -2,8 +2,12 @@ import React, { Component } from 'react';
 //import { BrowserRouter as Router } from 'react-router-dom';
 import { handleInitialData } from '../actions/shared';
 import { connect } from 'react-redux';
-import SingIn from './SingIn';
+//import SingIn from './SingIn';
 import { Container, Row, Col, Navbar, Nav } from 'react-bootstrap';
+import QuestionBar  from './QuestionBar'
+import QuestionNav from './QuestionNav'
+import QuestionPreviewContainer from './QuestionPreviewContainer'
+
 
 //All my components 
 //App
@@ -36,10 +40,13 @@ class App extends Component {
             </Nav>
           </Navbar.Collapse>
         </Navbar>
+
+        <QuestionBar/>
+        <QuestionNav/>
         <div>
           {this.props.loading === true
             ? null
-            : <SingIn />
+            : <QuestionPreviewContainer />
           }
         </div>
       </Container>
