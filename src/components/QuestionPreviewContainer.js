@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
+import QuestionPreview from './QuestionPreview'
+import { Container, Row, Col, Navbar, Nav } from 'react-bootstrap'
 
 class QuestionPreviewContainer extends Component {
     render() {
@@ -9,7 +11,7 @@ class QuestionPreviewContainer extends Component {
                 QuestionPreviewContainer
                 <ul>
                     {this.props.questionIds.map((id) => (
-                        <li>question id: {id}</li>
+                        <li><QuestionPreview/></li>
                     ))}
                 </ul>
             </div>

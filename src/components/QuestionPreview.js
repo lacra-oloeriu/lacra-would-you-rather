@@ -1,36 +1,31 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { Button, Card } from 'react-bootstrap';
-import { CardText } from 'react-bootstrap/Card';
+//import { connect } from 'react-redux';
+//import { Button, Card } from 'react-bootstrap';
+//import { CardText } from 'react-bootstrap/Card';
+import { Row, Col, Image, Card, Button, Container } from 'react-bootstrap'
+var placeholder = require('../images/paceholder.svg')
 
-class QuestionPreview {
-    render() {
-        return (
 
-            <Card>
-                <Card.Header as="h5">Featured</Card.Header>
-                <Card.Body>
-                    <Card.Title>
-                        Title
-                    </Card.Title>
-                    <Card.Text>
-                        Text Below
-                </Card.Text>
-                    <Button variant="primary">Go some where</Button>
-                </Card.Body>
-            </Card>
+class QuestionPreview extends Component {
+  render() {
+    return (
+      
+      <Container>
+        <Row>
+          Name Sirname askes:
+        </Row>
+        <Row className="justify-content-md-center">
+          <Col>
+            <Image src={placeholder} roundedCircle />
+          </Col>
+          <Col  >
+            the content of the big column
+          </Col>
 
-        )
-    }
+        </Row>
+      </Container>
+      )
+  }
 }
 
-function mapStateToProps ({authedUser, users, questions}, { id }) {
-    const question = questions[id]
-  
-    return {
-      authedUser,
-      question,
-    }
-  }
-  
-  export default connect(mapStateToProps)(QuestionPreview)
+export default QuestionPreview
