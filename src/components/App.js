@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-//import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { handleInitialData } from '../actions/shared';
 import { connect } from 'react-redux';
-//import SingIn from './SingIn';
 import { Container, Row, Col, Navbar, Nav } from 'react-bootstrap';
 import QuestionBar  from './QuestionBar'
 import QuestionNav from './QuestionNav'
 import QuestionPreviewContainer from './QuestionPreviewContainer'
+import { Grid } from 'react-redux'
 
 
 //All my components 
@@ -23,7 +23,7 @@ import QuestionPreviewContainer from './QuestionPreviewContainer'
 
 class App extends Component {
   componentDidMount() {
-    this.props.handleInitialData();
+    this.props.handleInitialData()
   }
   render() {
     //const { authedUser } = this.props
